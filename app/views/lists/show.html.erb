@@ -1,0 +1,7 @@
+<h1><%= @list.name.capitalize %></h1>
+<br>
+
+
+<%= link_to "Add a new bookmark", new_list_bookmark_path(@list) %>
+<br>
+<%= link_to "Go back to all lists", lists_path %>
