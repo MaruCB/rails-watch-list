@@ -2,9 +2,17 @@
 
 <br>
 
+<%= cl_image_tag("zfb8rntyzzp5cqyzi6jw",
+      width: 400, height: 300, crop: :fill) %>
+
+      <br>
+
 <ul>
 <% @lists.each do |list| %>
 <p><%= link_to list.name, list_path(list) %></p>
+  <% if list.photo.attached? %>
+  <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
 <% end %>
 </ul>
 

@@ -1,6 +1,8 @@
 <h1><%= @list.name.capitalize %></h1>
 <br>
 
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+
 
 <%= link_to "Add a new bookmark", new_list_bookmark_path(@list) %>
 <br>
